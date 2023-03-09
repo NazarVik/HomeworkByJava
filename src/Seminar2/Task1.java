@@ -13,11 +13,11 @@ public class Task1 {
         String newStr = inputStr.replace("\"","")
                 .replace("{","")
                 .replace("}","");
-        String[] st = newStr.split(",");
+        String[] strArr = newStr.split(",");
 
-        for (String item : st) {
+        for (String item : strArr) {
             if (!item.contains("null")){
-                strResult.append(enterString + item.strip() + "\n");
+                strResult.append(enterString + item.strip().replace(":"," = ")+ "\n");
             }
         }
         System.out.println(strResult);
