@@ -1,0 +1,90 @@
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: start sort
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 2 element = 5
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 3 element = 8
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 4 element = 55
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 55 and 7
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 5 element = 55
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 6 element = 443
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 443 and 32
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 7 element = 443
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 443 and 9
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 2 element = 5
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 3 element = 8
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 8 and 7
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 4 element = 8
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 5 element = 55
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 55 and 32
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 6 element = 55
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 55 and 9
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 2 element = 5
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 3 element = 7
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 4 element = 8
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 5 element = 32
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: swap 32 and 9
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 2 element = 5
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 3 element = 7
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 4 element = 8
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 2 element = 5
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 3 element = 7
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 2 element = 5
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 1 element = 2
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: check 0 element = 1
+мар. 09, 2023 11:54:29 PM Seminar2.Task2 main
+INFO: end sort
