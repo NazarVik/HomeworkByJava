@@ -1,6 +1,7 @@
 package Seminar2;
 
 
+
 public class Task1 {
     // Дана строка sql-запроса "select * from students where ". Сформируйте часть WHERE этого запроса,
     // используя StringBuilder. Данные для фильтрации приведены ниже в виде json строки.
@@ -10,11 +11,11 @@ public class Task1 {
         String enterString = "select * from students where ";
         StringBuilder strResult = new StringBuilder();
         String inputStr = "{\"name\":\"Ivanov\", \"country\":\"Russia\", \"city\":\"Moscow\", \"age\":\"null\"}";
-        String newStr = inputStr.replace("\"","")
-                .replace("{","")
-                .replace("}","");
-        String[] strArr = newStr.split(",");
 
+        String newStr = inputStr.replaceAll("[\"{}]","");
+        System.out.println(newStr);
+        String[] strArr = newStr.split(",");
+//
         for (String item : strArr) {
             if (!item.contains("null")){
                 strResult.append(enterString + item.strip().replace(":"," = ")+ "\n");
