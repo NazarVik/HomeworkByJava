@@ -24,8 +24,8 @@ public class Task2 {
 
 
         for (Map.Entry<String, String> item : listPerson.entrySet()) {
-            someKey = listCount.getOrDefault(item.getValue(), defaultVal);
 
+            someKey = listCount.getOrDefault(item.getValue(), defaultVal);
             listCount.put(item.getValue(), ++someKey );
         }
 
