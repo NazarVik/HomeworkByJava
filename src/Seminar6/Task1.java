@@ -9,8 +9,8 @@ public class Task1 {
         Notebook note1 = new Notebook("Lenova", 17.0, "i5", "Windows", 8, 128);
         Notebook note2 = new Notebook("Asus", 15.6, "i7", "Windows", 16, 128);
         Notebook note3 = new Notebook("HP", 15.6, "i3", "Linux", 8, 128);
-        Notebook note4 = new Notebook("MacBook Pro ", 13.3, "i5", "IOS", 8, 254);
-        Notebook note5 = new Notebook("MacBooK Air", 13.3, "i3", "IOS", 4, 128);
+        Notebook note4 = new Notebook("Macbook", 13.3, "i5", "IOS", 8, 254);
+        Notebook note5 = new Notebook("Macbook", 13.3, "i3", "IOS", 4, 128);
         Notebook note6 = new Notebook("Acer", 15.6, "i3", "Windows", 4, 128);
 
         Collections.addAll(list, note1, note2, note3, note4, note5, note6);
@@ -23,31 +23,35 @@ public class Task1 {
 //        mapChoice.put(5, "ram");
 //        mapChoice.put(6, "ssd");
 
-        System.out.println("введите критерий сортировки: 1 - модель \n" +
+        System.out.print("введите критерий сортировки: \n1 - модель \n" +
                 "2 - диогональ экрана\n" +
                 "3 - процессор\n" +
                 "4 - операционная система\n" +
                 "5 - оперативная память\n" +
-                "6 - объем накопителя");
+                "6 - объем накопителя\n" +
+                "--> ");
 
         Scanner in = new Scanner(System.in);
         int choice = in.nextInt();
 
         switch(choice) {
             case 1: {
-                System.out.println("введите модель (Acer, Lenova, HP, Asus, MacBook Pro, MacBooK Air:");
+                System.out.print("введите модель (Acer, Lenova, HP, Asus, Macbook, MacbooK): ");
                 modelSort(list, in.next());
                 break;
             }
             case 2: {
+                System.out.print("введите размер диогонали (13.3, 15.6, 17.0): ");
                 sizeSort();
                 break;
             }
             case 3: {
+                System.out.print("введите модель процессора (i3, i5, i7): ");
                 cpuSort();
                 break;
             }
             case 4: {
+                System.out.println();
                 osSort();
                 break;
             }
