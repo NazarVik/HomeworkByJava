@@ -1,9 +1,11 @@
 package Seminar6;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Task1 {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws Exception {
         List<Notebook> list = new ArrayList<>();
 
         Notebook note1 = new Notebook("lenova", 17.0, "i5", "windows", 8, 128);
@@ -16,63 +18,59 @@ public class Task1 {
 
         Collections.addAll(list, note1, note2, note3, note4, note5, note6, note7);
 
-        System.out.print("" +
-                "1 - модель\n" +
-                "2 - диогональ экрана\n" +
-                "3 - процессор\n" +
-                "4 - операционная система\n" +
-                "5 - оперативная память\n" +
-                "6 - объем накопителя\n" +
-                "введите критерий сортировки через пробел: ");
+        System.out.print("""
+                1 - модель
+                2 - диогональ экрана
+                3 - процессор
+                4 - операционная система
+                5 - оперативная память
+                6 - объем накопителя
+                введите критерий сортировки через пробел:\s""");
 
         Scanner in = new Scanner(System.in);
         String[] choice = in.nextLine().split(" ");
 
-        for (String str : choice) {
-            switch (str) {
-                case "1": {
-                    System.out.print("введите модель (acer, lenova, hp, asus, macbook): ");
-                    modelSort(list, in.next().toLowerCase());
-                    System.out.println(list);
-                    break;
+        try {
+            for (String str : choice) {
+                switch (str) {
+                    case "1" -> {
+                        System.out.print("введите модель (acer, lenova, hp, asus, macbook): ");
+                        modelSort(list, in.next().toLowerCase());
+                        System.out.println(list);
+                    }
+                    case "2" -> {
+                        System.out.print("введите размер диогонали (13.3, 15.6, 17.0): ");
+                        sizeSort(list, in.next().toLowerCase());
+                        System.out.println(list);
+                    }
+                    case "3" -> {
+                        System.out.print("введите модель процессора (i3, i5, i7): ");
+                        cpuSort(list, in.next().toLowerCase());
+                        System.out.println(list);
+                    }
+                    case "4" -> {
+                        System.out.println("введите операционную систему (linux, windows, ios): ");
+                        osSort(list, in.next().toLowerCase());
+                        System.out.println(list);
+                    }
+                    case "5" -> {
+                        System.out.print("введите объем ОЗУ(4, 8, 16, 32): ");
+                        ramSort(list, in.next());
+                        System.out.println(list);
+                    }
+                    case "6" -> {
+                        System.out.print("введите объем накопителя(128, 254, 512, 1024): ");
+                        ssdSort(list, in.next().toLowerCase());
+                        System.out.println(list);
+                    }
+                    default -> throw new Exception();
                 }
-                case "2": {
-                    System.out.print("введите размер диогонали (13.3, 15.6, 17.0): ");
-                    sizeSort(list, in.next().toLowerCase());
-                    System.out.println(list);
-                    break;
-                }
-                case "3": {
-                    System.out.print("введите модель процессора (i3, i5, i7): ");
-                    cpuSort(list, in.next().toLowerCase());
-                    System.out.println(list);
-                    break;
-                }
-                case "4": {
-                    System.out.println("введите операционную систему (linux, windows, ios): ");
-                    osSort(list, in.next().toLowerCase());
-                    System.out.println(list);
-                    break;
-                }
-                case "5": {
-                    System.out.print("введите объем ОЗУ(4, 8, 16, 32): ");
-                    ramSort(list, in.next());
-                    System.out.println(list);
-                    break;
-                }
-                case "6": {
-                    System.out.print("введите объем накопителя(128, 254, 512, 1024): ");
-                    ssdSort(list, in.next().toLowerCase());
-                    System.out.println(list);
-                    break;
-                }
-
-                default:
-                    System.out.println("fail");
-                    break;
             }
+        } catch (Exception e) {
+            System.out.println("введены не корректные данные!!!");
         }
 
+        in.close();
     }
 
     private static void modelSort(List<Notebook> list, String str) {
