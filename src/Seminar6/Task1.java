@@ -11,12 +11,13 @@ public class Task1 {
         Notebook note3 = new Notebook("hp", 15.6, "i3", "linux", 8, 128);
         Notebook note4 = new Notebook("macbook", 13.3, "i5", "ios", 8, 254);
         Notebook note5 = new Notebook("macbook", 13.3, "i3", "ios", 4, 128);
-        Notebook note6 = new Notebook("macbook", 15.6, "i5", "ios", 8, 128);
+        Notebook note6 = new Notebook("macbook", 15.6, "i7", "ios", 16, 128);
         Notebook note7 = new Notebook("acer", 15.6, "i3", "windows", 4, 128);
 
         Collections.addAll(list, note1, note2, note3, note4, note5, note6, note7);
 
-        System.out.print("\n1 - модель\n" +
+        System.out.print("" +
+                "1 - модель\n" +
                 "2 - диогональ экрана\n" +
                 "3 - процессор\n" +
                 "4 - операционная система\n" +
@@ -28,37 +29,41 @@ public class Task1 {
         String[] choice = in.nextLine().split(" ");
 
         for (String str : choice) {
-
-
             switch (str) {
                 case "1": {
                     System.out.print("введите модель (acer, lenova, hp, asus, macbook): ");
-                    modelSort(list, in.next());
+                    modelSort(list, in.next().toLowerCase());
+                    System.out.println(list);
                     break;
                 }
                 case "2": {
                     System.out.print("введите размер диогонали (13.3, 15.6, 17.0): ");
-//                    sizeSort(copyList, in.next().toLowerCase());
+                    sizeSort(list, in.next().toLowerCase());
+                    System.out.println(list);
                     break;
                 }
                 case "3": {
                     System.out.print("введите модель процессора (i3, i5, i7): ");
-//                    cpuSort(copyList, in.next().toLowerCase());
+                    cpuSort(list, in.next().toLowerCase());
+                    System.out.println(list);
                     break;
                 }
                 case "4": {
-                    System.out.println("введите операционную систему (Linux, : ");
-//                    osSort(copyList, in.next().toLowerCase());
+                    System.out.println("введите операционную систему (linux, windows, ios): ");
+                    osSort(list, in.next().toLowerCase());
+                    System.out.println(list);
                     break;
                 }
                 case "5": {
-                    System.out.print("введите объем ОЗУ: ");
+                    System.out.print("введите объем ОЗУ(4, 8, 16, 32): ");
                     ramSort(list, in.next());
+                    System.out.println(list);
                     break;
                 }
                 case "6": {
-                    System.out.println();
-//                    ssdSort(copyList, in.next().toLowerCase());
+                    System.out.print("введите объем накопителя(128, 254, 512, 1024): ");
+                    ssdSort(list, in.next().toLowerCase());
+                    System.out.println(list);
                     break;
                 }
 
@@ -67,8 +72,6 @@ public class Task1 {
                     break;
             }
         }
-        System.out.println(list);
-
 
     }
 
@@ -77,16 +80,19 @@ public class Task1 {
         list.removeIf(item -> !str.equals(item.getModel()));
     }
 
-    private static void sizeSort() {
+    private static void sizeSort(List<Notebook> list, String str) {
+
+        list.removeIf(item -> !str.equals(item.getSize().toString()));
 
     }
 
-    private static void cpuSort() {
+    private static void cpuSort(List<Notebook> list, String str) {
 
+        list.removeIf(item -> !str.equals(item.getCpu()));
     }
 
-    private static void osSort() {
-
+    private static void osSort(List<Notebook> list, String str) {
+        list.removeIf(item -> !str.equals(item.getOs()));
     }
 
     private static void ramSort(List<Notebook> list, String str) {
@@ -94,7 +100,8 @@ public class Task1 {
         list.removeIf(item -> !(item.getRam() == Integer.parseInt(str)));
     }
 
-    private static void ssdSort() {
+    private static void ssdSort(List<Notebook> list, String str) {
 
+        list.removeIf(item -> !(item.getSsd() == Integer.parseInt(str)));
     }
 }
