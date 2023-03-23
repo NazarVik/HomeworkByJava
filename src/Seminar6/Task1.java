@@ -25,7 +25,7 @@ public class Task1 {
                 4 - операционная система
                 5 - оперативная память
                 6 - объем накопителя
-                введите критерий сортировки через пробел:\s""");
+                введите критерии сортировки через пробел:\s""");
 
         Scanner in = new Scanner(System.in);
         String[] choice = in.nextLine().split(" ");
@@ -36,32 +36,33 @@ public class Task1 {
                     case "1" -> {
                         System.out.print("введите модель (acer, lenova, hp, asus, macbook): ");
                         modelSort(list, in.next().toLowerCase());
-                        System.out.println(list);
+                        list.forEach(System.out::println);
+
                     }
                     case "2" -> {
                         System.out.print("введите размер диогонали (13.3, 15.6, 17.0): ");
                         sizeSort(list, in.next().toLowerCase());
-                        System.out.println(list);
+                        list.forEach(System.out::println);
                     }
                     case "3" -> {
                         System.out.print("введите модель процессора (i3, i5, i7): ");
                         cpuSort(list, in.next().toLowerCase());
-                        System.out.println(list);
+                        list.forEach(System.out::println);
                     }
                     case "4" -> {
                         System.out.println("введите операционную систему (linux, windows, ios): ");
                         osSort(list, in.next().toLowerCase());
-                        System.out.println(list);
+                        list.forEach(System.out::println);
                     }
                     case "5" -> {
                         System.out.print("введите объем ОЗУ(4, 8, 16, 32): ");
-                        ramSort(list, in.next());
-                        System.out.println(list);
+                        ramSort(list, in.next().toLowerCase());
+                        list.forEach(System.out::println);
                     }
                     case "6" -> {
                         System.out.print("введите объем накопителя(128, 254, 512, 1024): ");
                         ssdSort(list, in.next().toLowerCase());
-                        System.out.println(list);
+                        list.forEach(System.out::println);
                     }
                     default -> throw new Exception();
                 }
